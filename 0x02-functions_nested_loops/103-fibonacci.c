@@ -1,37 +1,32 @@
 #include <stdio.h>
 
 /**
- * sum_fibonacci - sums even fib bellow 4M
- * @limit: long integer
+ * main - Entry point
  *
- * Return: unsigned long
+ * Description: Fibonacci sequence
+ *
+ * Return: 0
  */
-unsigned long sum_fibonacci(long limit)
-{
-	long int prev, curr, temp;
-	unsigned long sum;
 
-	prev = 1;
-	curr = 2;
-	sum = 0;
-
-	while (curr < limit)
-	{
-		if (curr % 2 == 0)
-			sum += curr;
-		temp = curr;
-		curr = curr + prev;
-		prev = temp;
-	}
-	return (sum);
-}
-
-/**
-* main - entry point to the program
-* Return: Always 0 (Success)
-*/
 int main(void)
 {
-	printf("%ld\n", sum_fibonacci(4000000));
-	return (0);
+unsigned long int a = 4000000;
+unsigned long int b = 0;
+unsigned long int c = 1;
+unsigned long int d = 0;
+unsigned long int e = 0;
+
+while (a > d)
+{
+d = b + c;
+
+if ((d % 2) == 0)
+{
+e += d;
+}
+b = c;
+c = d;
+}
+printf("%li\n", e);
+return (0);
 }

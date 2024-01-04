@@ -1,13 +1,19 @@
-#include <stdio.h>
 #include "main.h"
+#include <unistd.h>
 
 /**
- * add - Prints 9 * 9 table with leading zeros
- * @a: int
- * @b: int
- * Return: int
+ * add - addition
+ *
+ * Description: function that adds two integers
+ *
+ * Return: 0
+ * @a:input
+ * @b:input
  */
+
 int add(int a, int b)
 {
-	return (a + b);
+int sum;
+sum = a + b;
+return (sum);
 }

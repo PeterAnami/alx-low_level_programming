@@ -1,19 +1,22 @@
-#include <stdio.h>
 #include "main.h"
+#include <unistd.h>
 
 /**
- * main - Entry point
- * Return: 0 on success
+ * main - check code
+ *
+ * Description: prints _putchar followed by a new line
+ *
+ * Return: Always 0
  */
+
 int main(void)
 {
-	int i;
-	char *word = "_putchar";
-
-	for (i = 0; word[i] != '\0'; i++)
-	{
-		_putchar(word[i]);
-	}
-	_putchar('\n');
-	return (0);
+char c[8] = "_putchar";
+int a;
+for (a = 0; a < 8; a++)
+{
+_putchar(c[a]);
+}
+_putchar('\n');
+return (0);
 }

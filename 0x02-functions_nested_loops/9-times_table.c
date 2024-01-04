@@ -1,46 +1,43 @@
-#include <stdio.h>
 #include "main.h"
+#include <unistd.h>
 
-#define ROW_COUNT 10
-#define COL_COUNT 10
 /**
- * times_table - Prints 9 * 9 table with leading zeros
- * Return: void
+ * times_table - prints the 9 times table
+ *
+ * Description: Prints the 9 times table starting with 0
+ *
+ * Return: 0
  */
+
 void times_table(void)
 {
-	int row, col;
-	int value;
-	int tens, ones;
-
-	for (row = 0; row < ROW_COUNT; row++)
-		for (col = 0; col < COL_COUNT; col++)
-		{
-			tens = 0;
-			value = row * col;
-			ones = value % 10;
-
-			if (value > ones)
-				tens = value / 10;
-
-			if (tens == 0)
-			{
-				if (col != 0)
-					_putchar(' ');
-				_putchar('0' + ones);
-			}
-			else
-			{
-				_putchar('0' + tens);
-				_putchar('0' + ones);
-			}
-
-			if (col == 9)
-				_putchar('\n');
-			else
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
-		}
+int a, b, c;
+for (b = 0; b < 10; b++)
+{
+for (a = 0; a < 10; a++)
+{
+c = a * b;
+if (a == 0)
+{
+_putchar(c + '0');
+}
+else if (c >= 10)
+{
+_putchar(' ');
+_putchar(c / 10 + '0');
+_putchar(c % 10 + '0');
+}
+else
+{
+_putchar(' ');
+_putchar(' ');
+_putchar(c + '0');
+}
+if (a != 9)
+{
+_putchar(',');
+}
+}
+_putchar('\n');
+}
 }

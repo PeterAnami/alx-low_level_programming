@@ -1,22 +1,21 @@
-#include "main.h"
-
-#define MAXIMUM 1024
+#include <stdio.h>
 
 /**
- * main - check the code.
+ * main - prints
  *
- * Return: Always 0.
+ * Decription: prints the sum of all the multiples
+ *
+ * Return: 0
  */
+
 int main(void)
 {
-long i, sum;
-
-sum = 0;
-for (i = 0; i < MAXIMUM; i++)
+int a, sum = 0;
+for (a = 0; a < 1024; a++)
 {
-if (((i % 3) == 0) || ((i % 5) == 0))
-sum += i;
+if  ((a % 3) == 0 || (a % 5) == 0)
+sum += a;
 }
-printf("%ld\n", sum);
+printf("%d\n", sum);
 return (0);
 }

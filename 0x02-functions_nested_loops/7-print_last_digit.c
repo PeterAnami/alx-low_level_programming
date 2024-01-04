@@ -1,20 +1,26 @@
-#include <stdio.h>
 #include "main.h"
+#include <unistd.h>
 
 /**
- * print_last_digit - Returns the absolute of a number
- * @n: number
- * Return: int
+ * print_last_digit - prints
+ *
+ * Description: prints the last digit of a number
+ *
+ * Return: 0
+ * @a:input
  */
-int print_last_digit(int n)
+
+int print_last_digit(int a)
 {
-	long intern;
+int last_digit;
+last_digit = a % 10;
 
-	intern = n;
-	if (intern < 0)
-		intern *= -1;
-
-	intern %= 10;
-	_putchar('0' + intern);
-	return (intern);
+if (last_digit < 0)
+{
+last_digit *= -1;
 }
+_putchar(last_digit + '0');
+
+return (last_digit);
+}
+
